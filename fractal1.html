@@ -11,12 +11,32 @@
 var elem = document.getElementById('canvas');
 var context = elem.getContext('2d');
 
-context.fillStyle = '#C0C0C0';
+context.fillStyle = '#000';
 context.lineWidth = 1;
-context.strokeStyle = '#0000ff';
+//context.strokeStyle = '#0000ff';
 
 var deg_to_rad = Math.PI / 180.0;
 var depth = 0;
+
+context.font = "20px Georgia";
+
+    context.fillText("How to run",100,100);
+
+    context.fillText("1. Write number of x and y.  # 1<=x<=100, 1<=y<=100. ## We add 10*x and 10*y as location x and y.",100,200);
+
+    context.fillText("2. Click 'save' button if you want to add this location x and y).",100,300);
+
+    context.fillText("3. Repeat this process to make location array.",100,400);
+
+    context.fillText("4. If you want to check this location array is polygon, Click 'drawPolygon' button.",100,500);
+
+    context.fillText("5. If it is polygon, program returns simplePolygon figure. else if it is not polygon, program returns 'Not Polygon'.",100,600);
+
+    context.fillText("6. If you get polygon and want to draw diagonal, Click 'result' button.",100,700);
+
+    context.fillText("# If you want to reset, Click 'clear' button.",100,800);
+
+
 var checkNum = function() {
       context.clearRect(0, 0, canvas.width, canvas.height);
 			var depth = document.getElementById('input').value;
